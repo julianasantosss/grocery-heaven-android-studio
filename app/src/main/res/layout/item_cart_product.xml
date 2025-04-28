@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="120dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Product Image" />
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="95dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Product Name Title -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Product Price Per Kg -->
+        <TextView
+            android:id="@+id/promoPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Promo Price"
+            android:textSize="14sp" />
+
+        <!-- Line -->
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/button_normal"
+            android:ems="10"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Set Quantity Product -->
+            <LinearLayout
+                android:layout_width="147dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Minus Button -->
+                <ImageButton
+                    android:id="@+id/removeButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Remove"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_minus" />
+
+                <!-- Quantity Product -->
+                <TextView
+                    android:id="@+id/productQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:text="1"
+                    android:textSize="16sp" />
+
+                <!-- Plus Button -->
+                <ImageButton
+                    android:id="@+id/addButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Add"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add_button" />
+
+            </LinearLayout>
+
+            <!-- Final Price Button -->
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="71dp"
+                android:layout_height="match_parent"
+                android:text="Price"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
