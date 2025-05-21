@@ -6,5 +6,6 @@
     <color name="greendark">#656d4a</color>
     <color name="button_normal">#D6D6D6</color>
     <color name="button_selected">#FF5B5B</color>
+    <color name="transparent">#00000000</color>
 
 </resources>

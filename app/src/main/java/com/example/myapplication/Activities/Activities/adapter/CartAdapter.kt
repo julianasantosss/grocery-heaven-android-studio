@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Activities.Activities.cart.CartItem
 import com.example.myapplication.Activities.Activities.cart.CartManager
-import com.example.myapplication.Activities.data.model.Product
 import com.example.myapplication.R
 
 class CartAdapter(

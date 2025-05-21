@@ -44,6 +44,7 @@
         android:drawableStart="@drawable/location_icon"
         android:hint="  Search"
         android:paddingStart="16dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"

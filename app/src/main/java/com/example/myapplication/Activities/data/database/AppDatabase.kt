@@ -6,13 +6,17 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.myapplication.Activities.data.dao.ProductDao
+import com.example.myapplication.Activities.data.dao.UserDao
 import com.example.myapplication.Activities.data.model.CategoryConverter
 import com.example.myapplication.Activities.data.model.Product
+import com.example.myapplication.Activities.data.model.User
 
-@Database(entities = [Product::class], version = 1)
+@Database(entities = [Product::class, User::class], version = 1)
+
 @TypeConverters(CategoryConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
+    abstract fun userDao(): UserDao
 
     companion object {
         // Singleton so it does not create multiple instances
@@ -24,7 +28,8 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "product_database"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 instance
             }

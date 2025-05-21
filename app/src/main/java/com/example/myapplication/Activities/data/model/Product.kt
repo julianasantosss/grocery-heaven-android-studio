@@ -26,11 +26,11 @@ enum class Category {
 class CategoryConverter {
     @TypeConverter
     fun fromCategory(category: Category): String {
-        return category.name
+        return category.name  // Convert enum to String (ex: Category.VEGETABLES → "VEGETABLES")
     }
 
     @TypeConverter
     fun toCategory(categoryName: String): Category {
-        return Category.valueOf(categoryName)
+        return Category.valueOf(categoryName)  // Convert String to enum (ex: “VEGETABLES” → Category.VEGETABLES).
     }
 }

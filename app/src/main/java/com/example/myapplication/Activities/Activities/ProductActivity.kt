@@ -39,7 +39,7 @@ class ProductActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this, factory)[ProductViewModel::class.java]
 
-        /*
+
                 //(insert code)
                         val products = listOf(
                     // VEGETABLES
@@ -221,9 +221,9 @@ class ProductActivity : AppCompatActivity() {
                     viewModel.insert(product)
                 }
 
-                        //Delete:
-                        //viewModel.deleteAll()
-                */
+        /*             //Delete:
+                 viewModel.deleteAll()
+        */
         adapter = ProductAdapter { product ->
             val cartItem = CartItem(
                 productId = product.id,
