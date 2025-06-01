@@ -3,9 +3,9 @@ package com.example.myapplication.Activities.data.repository
 import com.example.myapplication.Activities.data.dao.UserDao
 import com.example.myapplication.Activities.data.model.User
 
-class UserRepository (private val dao: UserDao) {
+class UserRepository(private val dao: UserDao) {
 
-    suspend fun insert(user : User) {
+    suspend fun insert(user: User) {
         dao.insertUser(user)
     }
 

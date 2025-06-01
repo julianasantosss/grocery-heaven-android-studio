@@ -1,6 +1,8 @@
 package com.example.myapplication.Activities.Activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,11 +29,17 @@ class UserActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val imageView = findViewById<ImageView>(R.id.imageView5)
         val dao = AppDatabase.getDatabase(application).userDao()
         val repository = UserRepository(dao)
         val factory = UserViewModelFactory(repository)
 
         viewModel = ViewModelProvider(this, factory)[UserViewModel::class.java]
+
+        imageView.setOnClickListener {
+            val intent = Intent(this, CameraActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.buttonSignUp.setOnClickListener{
             val name = binding.editTextUsername.text.toString()
